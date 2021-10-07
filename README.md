@@ -1,5 +1,5 @@
 # no-ip-updater:v1
-
+Docker image/container for the no-ip(.com) dynamic dns updater program 
 ## To build use: 
 ```sh
 docker build -t "no-ip-updater:v1" . #from this folder
