@@ -5,6 +5,8 @@ RUN_OPTIONS=-d --restart unless-stopped --name=${CONTAINER_NAME}
 
 build_image:
 	docker build -t ${IMAGE_NAME}:${IMAGE_VERSION} .
+build_image_armhf:
+	docker build -t ${IMAGE_NAME}:${IMAGE_VERSION} armhf/.
 run_container:
 	docker run ${RUN_OPTIONS} ${IMAGE_NAME}:${IMAGE_VERSION}
 	docker exec -it ${CONTAINER_NAME} noip2 -C

@@ -2,7 +2,7 @@
 
 ## To build use: 
 ```sh
-docker build -t "no-ip-updater:v1" . from this folder
+docker build -t "no-ip-updater:v1" . #from this folder
 ```
 or
 ```sh
