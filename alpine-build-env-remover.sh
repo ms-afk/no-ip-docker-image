@@ -1,3 +1,3 @@
 #!/bin/sh
 apk --purge del --no-cache .build-deps
-rm alpine-build-env-installer build-noip alpine-build-env-remover
+rm alpine-build-env-installer.sh build-noip.sh alpine-build-env-remover.sh
