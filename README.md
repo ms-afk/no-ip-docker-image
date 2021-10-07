@@ -1,4 +1,4 @@
-# armhf-no-ip-updater:v1
+# no-ip-updater:v1
 
 ## To build use: 
 ```sh
