@@ -1,5 +1,5 @@
 IMAGE_VERSION=v1
-IMAGE_NAME=armhf-no-ip-updater
+IMAGE_NAME=no-ip-updater
 CONTAINER_NAME=no-ip-updater
 RUN_OPTIONS=-d --restart unless-stopped --name=${CONTAINER_NAME}
 
