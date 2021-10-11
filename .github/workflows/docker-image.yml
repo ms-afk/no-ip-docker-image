@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Get the tag name
-      run: echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+    - id: get_version
+      uses: battila7/get-version-action@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag no-ip-updater:${{ env.TAG }}
+      run: docker build . --file Dockerfile --tag no-ip-updater:${{ steps.get_version.outputs.version }}
