@@ -15,5 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Get the tag name
+      run: echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag no-ip-updater:${{ github.ref }}
+      run: docker build . --file Dockerfile --tag no-ip-updater:${{ env.TAG }}
