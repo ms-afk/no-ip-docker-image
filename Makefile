@@ -1,4 +1,5 @@
 IMAGE_VERSION=v1
+IMAGE_VERSION_ARMHF=${IMAGE_VERSION}-armhf
 IMAGE_NAME=no-ip-updater
 CONTAINER_NAME=no-ip-updater
 RUN_OPTIONS=-d --restart unless-stopped --name=${CONTAINER_NAME}
@@ -6,9 +7,13 @@ RUN_OPTIONS=-d --restart unless-stopped --name=${CONTAINER_NAME}
 build_image:
 	docker build -t ${IMAGE_NAME}:${IMAGE_VERSION} .
 build_image_armhf:
-	docker build -t ${IMAGE_NAME}:${IMAGE_VERSION} armhf/.
+	docker build -t ${IMAGE_NAME}:${IMAGE_VERSION_ARMHF} -f armhf/Dockerfile .
 run_container:
 	docker run ${RUN_OPTIONS} ${IMAGE_NAME}:${IMAGE_VERSION}
+	docker exec -it ${CONTAINER_NAME} noip2 -C
+	docker restart ${CONTAINER_NAME}
+run_container_armhf:
+	docker run ${RUN_OPTIONS} ${IMAGE_NAME}:${IMAGE_VERSION_ARMHF}
 	docker exec -it ${CONTAINER_NAME} noip2 -C
 	docker restart ${CONTAINER_NAME}
 clean:

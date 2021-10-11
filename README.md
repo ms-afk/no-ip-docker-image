@@ -21,3 +21,6 @@ or
 make run_container
 #follow instructions
 ```
+
+## For the armhf version
+See armhf/README.md
