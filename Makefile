@@ -26,3 +26,6 @@ clean:
 	@if [ "$$(docker images -q ${IMAGE_NAME}:${IMAGE_VERSION})" != "" ]; then \
 		docker rmi $$(docker images -q ${IMAGE_NAME}:${IMAGE_VERSION}); \
 	fi
+	@if [ "$$(docker images -q ${IMAGE_NAME}:${IMAGE_VERSION_ARMHF})" != "" ]; then \
+                docker rmi $$(docker images -q ${IMAGE_NAME}:${IMAGE_VERSION_ARMHF}); \
+        fi
