@@ -23,4 +23,4 @@ make run_container
 ```
 
 ## For the armhf version
-See armhf/README.md
+See [armhf/README.md](armhf/README.md)
