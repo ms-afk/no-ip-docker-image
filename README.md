@@ -1,8 +1,6 @@
 # no-ip-updater
 Docker image/container for the no-ip(.com) dynamic dns updater program 
 
-[![Build standard image](https://github.com/ms-afk/no-ip-docker-image/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/ms-afk/no-ip-docker-image/actions/workflows/docker-image.yml)
-
 ## To build use: 
 ```sh
 docker build -t "no-ip-updater:version_number" . #from this folder
@@ -11,6 +9,8 @@ or
 ```sh
 make
 ```
+
+[![Build standard image](https://github.com/ms-afk/no-ip-docker-image/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/ms-afk/no-ip-docker-image/actions/workflows/docker-image.yml)
 
 ## To run use:
 ```sh
