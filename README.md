@@ -14,7 +14,7 @@ make
 
 ## To run use:
 ```sh
-docker run -d --restart unless-stopped -name=no-ip-updater no-ip-updater:version_number
+docker run -d --restart unless-stopped --name=no-ip-updater no-ip-updater:version_number
 docker exec -it no-ip-updater noip2 -C
 #follow instructions ...
 docker restart no-ip-updater
